@@ -1,9 +1,6 @@
 import * as React from "react";
 import { Admin, Resource,fetchUtils} from "react-admin";
-import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
-import UserIcon from '@mui/icons-material/Group';
 import Dashboard from "./essentials/Dashboard";
-import EngineeringIcon from '@mui/icons-material/Engineering';
 import authProvider from "./essentials/authProvider";
 import dataProvider from "./essentials/dataProvider";
 

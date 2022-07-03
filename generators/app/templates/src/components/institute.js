@@ -7,7 +7,8 @@ import { List,
     Create,
     SimpleForm,
     TextInput,
-    useRecordContext, UrlField
+    useRecordContext, 
+    UrlField
 } from "react-admin";
 
 const InstituteTitle = () => {
@@ -31,8 +32,10 @@ export const InstituteList = () => {
 export const InstituteEdit = () => (
      <Edit title={<InstituteTitle/>}>
         <SimpleForm>
-            <TextInput source="id"/>
-            <TextInput source="name"/>
+            <TextInput source="instituteName"/>
+            <TextInput source="address"/>
+            <TextInput source="establishmentYear"/>
+            <TextInput source="contactNumber"/>
         </SimpleForm>
     </Edit>
 )
@@ -40,9 +43,14 @@ export const InstituteEdit = () => (
 export const InstituteCreate = props => (
     <Create {...props}>
         <SimpleForm>
+            <TextInput source="instituteName"/>
+            <TextInput source="address"/>
+            <TextInput source="establishmentYear"/>
+            <TextInput source="contactNumber"/>
+            <TextInput source="gstId"/>
             <TextInput source="email"/>
-            <TextInput source="name"/>
-            <TextInput multiline source="body" />
+            <TextInput source="website"/>
+            <TextInput source="catagory"/>
         </SimpleForm>
     </Create>
 );

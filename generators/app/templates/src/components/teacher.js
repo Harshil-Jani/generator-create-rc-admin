@@ -1,5 +1,6 @@
 import * as React from "react";
-import {   List,
+import {
+    List,
     Datagrid,
     TextField,
     EditButton,
@@ -7,7 +8,13 @@ import {   List,
     Create,
     SimpleForm,
     TextInput,
-    useRecordContext, EmailField
+    useRecordContext, 
+    EmailField, 
+    SimpleFormIterator, 
+    ArrayField, 
+    SingleFieldList, 
+    ChipField, 
+    ArrayInput
 } from "react-admin";
 
 const TeacherTitle = () => {
@@ -17,22 +24,33 @@ const TeacherTitle = () => {
 
 export const TeacherList = () => {
     return <List>
-        <Datagrid>
-            <TextField source="name"/>
-            <EmailField source="email"/>
-            <TextField source="phoneNumber"/>
-            <TextField source="school"/>
-            <TextField source="subjects[1]" label="Subject"/>
-            <EditButton/>
+        <Datagrid >
+            <TextField source="name" />
+            <EmailField source="email" />
+            <TextField source="phoneNumber" />
+            <TextField source="school" />
+            <ArrayField source="subjects">
+                <SingleFieldList>
+                    <ChipField source="name" />
+                </SingleFieldList>
+            </ArrayField>
+            <EditButton />
         </Datagrid>
     </List>
 }
 
 export const TeacherEdit = () => (
-     <Edit title={<TeacherTitle/>}>
+    <Edit title={<TeacherTitle />}>
         <SimpleForm>
-            <TextInput source="id"/>
-            <TextInput source="name"/>
+            <TextInput source="name" />
+            <TextInput source="email" />
+            <TextInput source="phoneNumber" />
+            <TextInput source="school" disabled />
+            <ArrayInput source="subjects">
+                <SimpleFormIterator>
+                    <TextInput source="name" />
+                </SimpleFormIterator>
+            </ArrayInput>
         </SimpleForm>
     </Edit>
 )
@@ -40,9 +58,15 @@ export const TeacherEdit = () => (
 export const TeacherCreate = props => (
     <Create {...props}>
         <SimpleForm>
-            <TextInput source="email"/>
-            <TextInput source="name"/>
-            <TextInput multiline source="body" />
+            <TextInput source="name" />
+            <TextInput source="email" />
+            <TextInput source="phoneNumber"/>
+            <ArrayInput source="subjects">
+                <SimpleFormIterator>
+                    <TextInput source="name" />
+                </SimpleFormIterator>
+            </ArrayInput>
+            <TextInput source="school" label="NIT Surat" disabled/>
         </SimpleForm>
     </Create>
 );
