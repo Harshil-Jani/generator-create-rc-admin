@@ -3,7 +3,7 @@ import { Admin, Resource,fetchUtils} from "react-admin";
 import Dashboard from "./essentials/Dashboard";
 import authProvider from "./essentials/authProvider";
 import dataProvider from "./essentials/dataProvider";
-
+import './app.css';
 import {StudentList ,StudentEdit, StudentCreate} from "./components/student";
 import {TeacherList, TeacherCreate, TeacherEdit} from "./components/teacher";
 import {InstituteCreate, InstituteList, InstituteEdit} from "./components/institute";

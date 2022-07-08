@@ -22,7 +22,8 @@
             "phoneNumber" : "112324",
             "school" :"NIT Surat",
             "subjects" : [
-                "english", "maths", "anything"
+                {"name" : "english"}, 
+                {"name" : "maths"}
             ]
         }
     ],
