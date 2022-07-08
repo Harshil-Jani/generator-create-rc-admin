@@ -1,42 +1,49 @@
 {
-    "student" : [
+    "student": [
         {
-            "id" : "1",
-            "name" : "Harshil Jani",
-            "email" : "harshiljani2002@gmail.com",
-            "phoneNumber" : "12345",
-            "school" : "NIT Surat"
-        },{
-            "id" : "2",
-            "name" : "Another Name",
-            "email" : "Email@domain.some",
-            "phoneNumber" : "67890",
-            "school" :"NIT Surat"
+            "id": "1",
+            "name": "Harshil Jani",
+            "phoneNumber": "12345",
+            "school": "NIT Surat"
+        },
+        {
+            "id": "2",
+            "name": "Another Name",
+            "phoneNumber": "67890",
+            "school": "NIT Surat"
         }
     ],
-    "teacher" : [
+    "teacher": [
         {
-            "id" : "1",
-            "name" :"Harshil Jani",
-            "email" : "anything@f.vc",
-            "phoneNumber" : "112324",
-            "school" :"NIT Surat",
-            "subjects" : [
-                "english", "maths", "anything"
+            "id": "1",
+            "name": "Harshil Jani",
+            "email": "anything@f.vc",
+            "phoneNumber": "112324",
+            "school": "NIT Surat",
+            "subjects": [
+                {
+                    "name": "english"
+                },
+                {
+                    "name": "maths"
+                },
+                {
+                    "name": "physics"
+                }
             ]
         }
     ],
-    "institute" : [
+    "institute": [
         {
-            "id" : "1",
-            "instituteName" : "NIT Surat",
-            "address" : "Bla Bla Bla",
-            "establishmentYear" : "1968",
-            "gstnId" : "324",
-            "contactNumber" : "2345",
-            "email" : "we@34rt.dr",
+            "id": "1",
+            "instituteName": "NIT Surat",
+            "address": "Bla Bla Bla",
+            "establishmentYear": "1968",
+            "gstnId": "324",
+            "contactNumber": "2345",
+            "email": "we@34rt.dr",
             "website": "svnit.ac.in",
-            "catagory" : "Deemed Universtiy"
+            "catagory": "Deemed Universtiy"
         }
     ]
 }

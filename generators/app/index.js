@@ -9,6 +9,11 @@ module.exports = class extends Generator {
          message: 'Which registry would you like to create?'
       }]);
       this.registry = registry;
+      const {sample} = await this.prompt([{
+         name : "sample",
+         message : "Enter the hosted endpoint of the registry to fetch data"
+      }]);
+      this.sample = sample;
       const {endpoints} = await this.prompt([{
          name : "endpoints",
          message : "Enter the endpoints : ( Separate with commas )"
@@ -27,7 +32,8 @@ module.exports = class extends Generator {
          this.destinationRoot(), 
          { 
             registry : this.registry,
-            endpoints : this.endpoints
+            endpoints : this.endpoints,
+            sample: this.sample
          }
       )
    }

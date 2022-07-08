@@ -10,7 +10,9 @@ import {InstituteCreate, InstituteList, InstituteEdit} from "./components/instit
 
 function App() {
   const endpoints_array = "<%=endpoints%>".split(",");
+  const JSON_file = "<%=sample%>"
 
+console.log(JSON_file);
   const list_components = {
     "student" : StudentList,
     "teacher" : TeacherList,
