@@ -28,7 +28,7 @@ function App() {
   }
 
   return (
-  <Admin authProvider={authProvider} dashboard={Dashboard} dataProvider={dataProvider} >
+  <Admin authProvider={authProvider} dashboard={Dashboard} dataProvider={dataProvider}>
     {endpoints_array.map((item, index) => {
       console.log(item[0].toUpperCase()+item.slice(1));
       return <Resource name={item} key={index} list={list_components[`${item}`]} create={create_components[`${item}`]} edit={edit_components[`${item}`]}/>
